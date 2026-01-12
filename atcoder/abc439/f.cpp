@@ -97,7 +97,6 @@ int main() {
     for (int i = 1; i < N; i++) {
         pre = (pre + 1LL * L[i - 1] * ipw2[i - 1] % MOD) % MOD;
         ans = (ans + 1LL * R[i] * pw2[i - 1] % MOD * pre % MOD) % MOD;
-        std::cerr << 1LL * pw2[i - 1] * ipw2[i - 1] % MOD << "\n";
     }
 
     std::cout << ans << "\n";
