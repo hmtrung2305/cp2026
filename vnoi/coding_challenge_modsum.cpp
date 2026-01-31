@@ -65,9 +65,10 @@ int main() {
                 break;
             }
 
+            int L = m;
             int R = std::min(i, a[i - 1] / t);
             int minL = i - R + 1;
-            int maxL = i - m + 1;
+            int maxL = i - L + 1;
             if (minL <= maxL) {
                 on[minL].push_back({i, t * (i + 1), -t});
                 if (minL + 1 <= n + 1) {
