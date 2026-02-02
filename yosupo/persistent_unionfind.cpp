@@ -16,10 +16,6 @@ struct DSU {
         return x;
     }
 
-    bool same(int x, int y) {
-        return find(x) == find(y);
-    }
-
     bool merge(int x, int y) {
         x = find(x);
         y = find(y);
