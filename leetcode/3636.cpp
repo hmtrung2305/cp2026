@@ -86,7 +86,6 @@ public:
                 int id = block[bl + 1][br - 1];
                 work(id, getFreq(id, l, r), resid, resfreq);
             }
-            // std::cout << resid << " " << resfreq << " " << bl << " " << br << "\n"; //(resid != -1 ? sa[resid] : -1) << "\n";
 
             k++;
             for (int i = l; i <= std::min(r, (bl + 1) * B - 1); i++) {
@@ -97,7 +96,7 @@ public:
                 vis[id] = k;
                 work(id, getFreq(id, l, r), resid, resfreq);
             }
-            std::cout << resid << " " << resfreq << "\n";
+            std::cout << l <<  << "\n";
             for (int i = std::max(l, br * B); i <= r; i++) {
                 int id = b[i];
                 if (vis[id] == k) {
